@@ -1,4 +1,4 @@
-var wordBank = ["modernism", "situationalist", "sartre", "camus", "hegel", "lacan", "barthes", "baudrillard", "foucault", "debord", "baudrillard"];
+var wordBank = ["bitcoin", "litecoin", "dogecoin", "digibyte", "dash", "xrp", "cardano", "ethereum", "monero", "stratis", "nebulas"];
 var word = [];
 var wrongGuesses = [];
 var rightGuesses = [];
