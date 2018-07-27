@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang=“en-us”> 
+<head>
+<meta charset=“UTF-8”>
+<title> Word Guess</title>
+
+<link rel= "text/stylesheet" href= "assets/css/style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+<style>
+  html {
+    font: 400 16px/1.428 'Verdana';
+   
+    
+  }
+
+  
+  main {
+    padding: 20px;
+  }
+  
+  footer,
+  header {
+    padding: 5px 20px;
+  }
+  
+  footer {
+    border-top: 2px ridge #666;
+  }
+  
+  header {
+    border-bottom: 2px ridge #666;
+  }
+  
+  .word-spaces,
+  .wrongLetters {
+    border: 1px ridge grey;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin: 10px 0;
+  }
+  
+  .word-spaces td,
+  .wrongLetters td {
+    border: 2px inset #BBB;
+    width: 3ch;
+    height: 1.5rem;
+    padding: 1px;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: white;
+  }
+  
+  .wrongLetters td {
+    color: red;
+  }
+  
+  .form-control {
+    width: 10ch;
+    text-align: center;
+  }
+  
+  ul {
+    font-size: 1rem;
+    list-style: none;
+    padding-left: 0;
+  }
+</style>
+ </head>
+<body> 
+    <header>
+        <h2>
+        Hangman
+        </h2>
+      </header>
+      <main>
+        <figure class="hangman">
+          <img src="https://i.imgur.com/gSxmkUf.gif" id="gallows" align="middle top">
+          <img src="https://i.imgur.com/Mb4owx9.gif" id="head" align="middle top" style="display:none;">
+          <img src="https://i.imgur.com/xkXISte.gif" id="body" align="middle top" style="display:none;">
+          <img src="https://i.imgur.com/U44ReUi.gif" id="armL" align="middle top" style="display:none;">
+          <img src="https://i.imgur.com/49kkaQF.gif" id="handL" align="middle top" style="display:none;">
+          <img src="https://i.imgur.com/tqtNazW.gif" id="armR" align="middle top" style="display:none;">
+          <img src="https://i.imgur.com/ydnz7eX.gif" id="handR" align="middle top" style="display:none;">
+          <img src="https://i.imgur.com/dlL7Kek.gif" id="legL" align="middle top" style="display:none;">
+          <img src="https://i.imgur.com/3AQYFV9.gif" id="footL" align="middle top" style="display:none;">
+          <img src="https://i.imgur.com/j9noEN7.gif" id="legR" align="middle top" style="display:none;">
+          <img src="https://i.imgur.com/kJofX7M.gif" id="footR" align="middle top" style="display:none;">
+        </figure>
+    
+        <table class="word-spaces">
+          <caption>Your Word is: </caption>
+          <tbody>
+            <tr></tr>
+          </tbody>
+        </table>
+        <br/>
+        <fieldset class="guessIn">
+          <legend>
+            Guess a Letter
+          </legend>
+          <label for="form">Type a Letter then Click <kbd>Enter</kbd></label>
+          <input type="text" id="form" class="form-control" placeholder="guess">
+    
+        </fieldset>
+    
+        <table class="wrongLetters">
+          <caption>Letters Guessed Wrong:</caption>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </main>
+      <script src="assets/javascript/game.js"></script>
+      <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</body>
+</html>
